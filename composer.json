@@ -1,10 +1,19 @@
 {
+    "name": "outlinker/mobility",
+    "description": "An app that connects commuters in the rural areas",
     "type": "project",
+    "authors": [
+        {
+            "name": "camilofgtp1",
+            "email": "camilo.andres.fernandez.gil@gmail.com"
+        }
+    ],
     "license": "proprietary",
     "require": {
         "php": "^7.1.3",
         "ext-ctype": "*",
         "ext-iconv": "*",
+        "ramsey/uuid-doctrine": "^1.5",
         "sensio/framework-extra-bundle": "^5.5",
         "symfony/asset": "4.3.*",
         "symfony/console": "4.3.*",
@@ -69,7 +78,7 @@
         ],
         "post-update-cmd": [
             "@auto-scripts"
-        ]
+        ]https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API
     },
     "conflict": {
         "symfony/symfony": "*"
