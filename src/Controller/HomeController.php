@@ -1,12 +1,16 @@
+<?php 
+
 namespace App\Controller;
 
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
-class HomeController
+
+class HomeController extends AbstractController
 {
     /**
-     * @Route("/, name="home")
+     * @Route("/", name="home")
      */
     public function home()
     {
