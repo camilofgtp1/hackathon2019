@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+/vendor/
+=======
 
 ###> symfony/framework-bundle ###
 /.env.local
@@ -21,3 +24,4 @@
 ###> removed ide specific configuration folder for phpstorm ###
 /.idea/
 ###< removed ide specific configuration folder for phpstorm ###
+>>>>>>> 37bb38909d87110a096bde3abed4d4b4caa52683
