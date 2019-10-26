@@ -1,0 +1,12 @@
+{
+    "name": "outlinker/mobility",
+    "description": "An app that connects commuters in the rural areas",
+    "type": "project",
+    "authors": [
+        {
+            "name": "camilofgtp1",
+            "email": "camilo.andres.fernandez.gil@gmail.com"
+        }
+    ],
+    "require": {}
+}
