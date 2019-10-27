@@ -194,6 +194,10 @@ div.title {
 		overflow: hidden;
 	}
 /* Navi */
+.naviPanel {
+	text-align: center;
+}
 .naviPanel > img {
 	max-width: 100%;
+	width: 500px;
 }
