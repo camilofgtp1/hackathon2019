@@ -1,7 +1,5 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello RequestingPassengerController!{% endblock %}
-
 {% block body %}
 <style>
     .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
@@ -27,6 +25,11 @@
                 </div>
             {% endfor %}
         </div>
+		<div class="menu flex-box-h">
+			<a href="{{ path('requesting_passenger')}}"><div class="button back"><img src='{{asset('gui/images/zurueck.png')}}' alt='Zurück' /></div></a>
+			<a href="#"><div></div></a>
+			<a href="#"><div></div></a>
+		</div>
 
     </div>
 {% endblock %}
