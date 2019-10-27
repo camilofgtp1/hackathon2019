@@ -1,10 +1,10 @@
 <?php declare(strict_types = 1);
 
-namespace App\Controller;
+namespace App\Controller\Planning;
 
 use App\Services\requestingPassengerDTOInterface;
 
-interface RequestingPassengerControllerInterface
+interface ScheduleInterface
 {
     public function index(requestingPassengerDTOInterface $dto);
 }
