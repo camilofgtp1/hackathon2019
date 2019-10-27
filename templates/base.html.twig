@@ -33,6 +33,22 @@
 					width:100%;
 				}
 				
+				div.title {
+					font-size: 24px;
+				}
+				
+				/* Bigger Displays */
+				@media only screen and (min-width: 600px) {
+					.outlinkerMain {
+						width: 504px;
+						margin: auto;
+					}
+					.timetable {
+						width: 526px;
+						margin: auto;
+					}
+				}
+				
 				/* Finder */
 					.chosen-container .chosen-results li {
 						font-size: 30px;
@@ -134,6 +150,7 @@
 							text-align: center;
 							vertical-align: middle;
 							border-left: 1px solid grey;
+							box-shadow: inset 6px -1px 15px 0px rgba(0,0,0,0.75);
 						}
 						.button.take {
 							margin-top: 30px;
@@ -142,7 +159,8 @@
 					.timetable {
 						/*color: white;*/
 						padding: 20px;
-						font-size:25px;
+						padding-top: 1px;
+						font-size:20px;
 						
 					}
 					
@@ -151,6 +169,7 @@
 						background-color: #9da4aa;
 						border-radius: 30px;
 						overflow: hidden;
+						
 					}
 					.timetable > .table > div {
 						/*display: table-row;*/
@@ -171,6 +190,7 @@
 					.timetable > .table > div > span {
 						display: table-cell;
 						padding:20px;
+						overflow: hidden;
 					}
 			</style>
 		{% endblock %}
