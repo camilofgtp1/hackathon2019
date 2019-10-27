@@ -105,13 +105,16 @@ div.title {
 		color: white;
 		line-height:40px;
 	}
-		.regBox{
+		.regBox {
 			color: white;
+			padding-top: 50px;
+		}
+		.regBox > div {
+			margin-top: 50px;
 		}
 		.regBox > input {
-			margin-top: 40px;
-			height: 20px;
-			width: 20px;
+			height: 40px;
+			width: 40px;
 		}
 		
 		.regularly + div {
@@ -119,6 +122,11 @@ div.title {
 		}
 		.regularly:checked + div {
 			display: flex;
+		}
+		.regBox > span {
+			position:absolute;
+			margin-left: 60px;
+			margin-top: 13px;
 		}
 		.regularlyFreqency + .chosen-container {
 			width: 33%!important; /* um "Chosen" nicht zu stören */
