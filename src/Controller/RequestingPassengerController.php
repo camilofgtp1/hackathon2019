@@ -30,7 +30,6 @@ class RequestingPassengerController extends AbstractController
     public function index(requestingPassengerDTOInterface $dto)
     {
         return $this->render('requesting_passenger/index.html.twig', [
-            'controller_name' => 'RequestingPassengerController',
             'dto' => $dto
         ]);
     }
