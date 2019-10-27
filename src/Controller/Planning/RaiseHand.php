@@ -17,8 +17,7 @@ class RaiseHand extends AbstractController
      */
     public function index(requestingPassengerDTOInterface $dto)
     {
-        return $this->render('requesting_passenger/find.html.twig', [
-            'controller_name' => 'RequestingPassengerFindController',
+        return $this->render('planning/find.html.twig', [
             'dto' => $dto
         ]);
     }

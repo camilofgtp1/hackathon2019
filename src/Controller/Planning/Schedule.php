@@ -17,7 +17,7 @@ class Schedule extends AbstractController
      */
     public function index(requestingPassengerDTOInterface $dto)
     {
-        return $this->render('requesting_passenger/index.html.twig', [
+        return $this->render('planning/index.html.twig', [
             'dto' => $dto
         ]);
     }
