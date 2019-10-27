@@ -6,4 +6,5 @@ interface requestingPassengerDTOInterface
 {
     public function getTitle(): string;
     public function getPlannedSchedule(): ScheduleListInterface;
+
 }

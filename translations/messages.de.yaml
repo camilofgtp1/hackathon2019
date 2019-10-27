@@ -1,4 +1,12 @@
 vehicle:
   type:
-    public:
-      bus: Öffentlicher Bus
+    bus: Öffentlicher Bus
+    train: Zug
+    car: Auto
+    Bike: Fahrrad
+    eBike: E-Bike
+    requestedBus: Rufbus
+    communityBus: Bürgerbus
+
+direction:
+  to: nach
