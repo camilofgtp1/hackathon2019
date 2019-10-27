@@ -14,16 +14,19 @@
         <div>
             {% for scheduleItem in dto.getPlannedSchedule.getList %}
                 <div>
-                <span class="timeOfArrival">
-                    {{ scheduleItem.getTimeOfArrival }}
-                </span>
-                <span class="vehicleType">
-                    {{ scheduleItem.getVehicleType | trans() }}
-                </span>
-                <span>nach</span>
-                <span class="destination">
-                    {{ scheduleItem.getDestination }}
-                </span>
+                    <span class="timeOfArrival">
+                        {{ scheduleItem.getTimeOfArrival }}
+                    </span>
+
+                    <span class="vehicleType">
+                        {{ scheduleItem.getVehicleType | trans() }}
+                    </span>
+
+                    <span> {{  'direction.to' | trans() }} </span>
+
+                    <span class="destination">
+                        {{ scheduleItem.getDestination }}
+                    </span>
                 </div>
             {% endfor %}
         </div>
