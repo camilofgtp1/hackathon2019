@@ -193,3 +193,7 @@ div.title {
 		padding:20px;
 		overflow: hidden;
 	}
+/* Navi */
+.naviPanel > img {
+	max-width: 100%;
+}
