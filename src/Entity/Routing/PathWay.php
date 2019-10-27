@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Entity;
+namespace App\Entity\Routing;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
@@ -9,7 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * @ORM\Entity(repositoryClass="App\Repository\PathWayRepository")
  */
-class PathWay
+class PathWay implements PathWayInterface
 {
     /**
      * @ORM\Id()
@@ -41,7 +41,7 @@ class PathWay
         return $this->connectedWays;
     }
 
-    public function addConnectedWay(Way $connectedWay): self
+    public function addConnectedWay(WayInterface $connectedWay): PathWayInterface
     {
         if (!$this->connectedWays->contains($connectedWay)) {
             $this->connectedWays[] = $connectedWay;
@@ -51,7 +51,7 @@ class PathWay
         return $this;
     }
 
-    public function removeConnectedWay(Way $connectedWay): self
+    public function removeConnectedWay(WayInterface $connectedWay): PathWayInterface
     {
         if ($this->connectedWays->contains($connectedWay)) {
             $this->connectedWays->removeElement($connectedWay);
