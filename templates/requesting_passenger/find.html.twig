@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+		<form class="flex-box-v outlinkerMain" method="post" enctype="multipart/form-data">
+			<div class="title">OUTLINKER</div>
+			<select data-placeholder="Von..." class="chosen-select fromPlace">
+				<option value="Hochschule Fulda N">Hochschule Fulda N</option>
+				<option value="Dipperz">Dipperz</option>
+			</select>
+			<div class="flex-box-h">
+				<input type="text" class="fromDay form-control" />
+				<div></div>
+				<input type="text" class="fromTime form-control" />
+			</div>
+			<div class="center">
+				<img src="{{asset('gui/images/arrow_down.png')}}" alt="Nach..." />
+			</div>
+			<select data-placeholder="Nach..." class="chosen-select toPlace">
+				<option value=""></option>
+				<option value="Hochschule Fulda N">Hochschule Fulda N</option>
+				<option value="Dipperz">Dipperz</option>
+			</select>
+			<div class="flex-box-h">
+				<input type="text" class="toDay form-control" />
+				<div></div>
+				<input type="text" class="toTime form-control" />
+			</div>
+			<div class="regBox">
+				<input class="regularly" type="checkbox" /> REGELMÄßIG
+				<div class="flex-box-h">
+					<select data-placeholder="Von..." class="chosen-select regularlyFreqency">
+						<option value="daily">Täglich</option>
+						<option value="weekday">Mo-Fr</option>
+						<option value="weekly">Wöchentlich</option>
+						<option value="monthly">Monatlich</option>
+						<option value="yearly">Jährlich</option>
+					</select>
+					<input class="regularlyDuration" />
+				</div>
+			</div>
+			<!--
+				<a href="javascript:void(0)" onClick="getGPS(this.nextSibling.children[0],this.nextSibling.children[1])"><div>GPS</div></a>
+				<div>
+					<input name='lat' value='' placeholder='lat' onFocusOut='trim(this)' />
+					<input name='lon' value='' placeholder='lon' onFocusOut='trim(this)' />
+				</div>
+			-->
+		</form>
+		<div class="menu flex-box-h">
+			<a href="{{ path('requesting_passenger')}}"><div class="button back"><img src='{{asset('gui/images/zurueck.png')}}' alt='Zurück' /></div></a>
+			<a href="javascript:tab('take')"><div class="button take"><img src='{{asset('gui/images/auto.png')}}' alt='Mitnehmen' /></div></a>
+			<a href="javascript:tab('thumb')"><div class="button thumb"><img src='{{asset('gui/images/daumen.png')}}' alt='Daumen raus' /></div></a>
+		</div>
+{% endblock %}
