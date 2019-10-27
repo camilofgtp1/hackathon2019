@@ -1,34 +1,34 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-    <div class="example-wrapper">
-        <h1>{{ dto.getTitle }}</h1>
+    <div class="timetable">
+		<div class="title">OUTLINKER</div>
 
-        <div>
+        <div class="table">
+			<div>
+				<span></span>
+				<span class="">
+					Busse von deinem Standort
+				</span>
+			</div>
             {% for scheduleItem in dto.getPlannedSchedule.getList %}
                 <div>
-                <span class="timeOfArrival">
-                    {{ scheduleItem.getTimeOfArrival }}
-                </span>
-                <span class="vehicleType">
-                    {{ scheduleItem.getVehicleType | trans() }}
-                </span>
-                <span>nach</span>
-                <span class="destination">
-                    {{ scheduleItem.getDestination }}
-                </span>
+					<span class="timeOfArrival">
+						{{ scheduleItem.getTimeOfArrival }}
+					</span>
+					<span class="vehicleType">
+						{{ scheduleItem.getVehicleType | trans() }}
+					<!--</span>
+					<span>-->nach<!--</span>
+					<span class="destination">-->
+						{{ scheduleItem.getDestination }}
+					</span>
                 </div>
             {% endfor %}
         </div>
 		<div class="menu flex-box-h">
-			<a href="{{ path('requesting_passenger')}}"><div class="button back"><img src='{{asset('gui/images/zurueck.png')}}' alt='Zurück' /></div></a>
-			<a href="#"><div></div></a>
-			<a href="#"><div></div></a>
+			<a href="{{ path('requesting_passenger_find')}}"><div class="button back"><img src='{{asset('gui/images/zurueck.png')}}' alt='Zurück' /></div></a>
 		</div>
 
     </div>
