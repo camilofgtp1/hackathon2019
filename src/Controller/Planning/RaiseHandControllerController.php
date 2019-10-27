@@ -7,8 +7,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class RaiseHand extends AbstractController
-    implements RaiseHandInterface
+class RaiseHandControllerController extends AbstractController
+    implements RaiseHandControllerInterface
 {
     /**
      * @Route("/planning/raise/hand", name="planning_raise_hand")

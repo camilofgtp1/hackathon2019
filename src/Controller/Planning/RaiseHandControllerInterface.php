@@ -4,7 +4,7 @@ namespace App\Controller\Planning;
 
 use App\Services\requestingPassengerDTOInterface;
 
-interface RaiseHandInterface
+interface RaiseHandControllerInterface
 {
     public function index(requestingPassengerDTOInterface $dto);
 }
