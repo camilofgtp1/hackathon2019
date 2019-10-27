@@ -56,18 +56,18 @@ interface NodeInterface
     public function getOriginForWays(): Collection;
 
     /**
-     * @param Way $originForWay
+     * @param WayInterface $originForWay
      * @return NodeInterface
      */
     public function addOriginForWay(
-        Way $originForWay): NodeInterface;
+        WayInterface $originForWay): NodeInterface;
 
     /**
-     * @param Way $originForWay
+     * @param WayInterface $originForWay
      * @return NodeInterface
      */
     public function removeOriginForWay(
-        Way $originForWay): NodeInterface;
+        WayInterface $originForWay): NodeInterface;
 
     /**
      * @return Collection|Way[]
@@ -75,16 +75,16 @@ interface NodeInterface
     public function getDestinationForWays(): Collection;
 
     /**
-     * @param Way $destinationForWay
+     * @param WayInterface $destinationForWay
      * @return NodeInterface
      */
     public function addDestinationForWay(
-        Way $destinationForWay): NodeInterface;
+        WayInterface $destinationForWay): NodeInterface;
 
     /**
-     * @param Way $destinationForWay
+     * @param WayInterface $destinationForWay
      * @return NodeInterface
      */
     public function removeDestinationForWay(
-        Way $destinationForWay): NodeInterface;
+        WayInterface $destinationForWay): NodeInterface;
 }
