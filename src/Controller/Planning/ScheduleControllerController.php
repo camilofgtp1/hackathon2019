@@ -7,8 +7,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class Schedule extends AbstractController
-    implements ScheduleInterface
+class ScheduleControllerController extends AbstractController
+    implements ScheduleControllerInterface
 {
     /**
      * @Route("/planning/schedule", name="planning_schedule")
