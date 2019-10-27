@@ -1,6 +1,6 @@
 <?php declare(strict_types = 1);
 
-namespace App\Entity;
+namespace App\Entity\Routing;
 
 use Doctrine\Common\Collections\Collection;
 
@@ -9,20 +9,44 @@ use Doctrine\Common\Collections\Collection;
  */
 interface NodeInterface
 {
+    /**
+     * @return int|null
+     */
     public function getId(): ?int;
 
+    /**
+     * @return float|null
+     */
     public function getLatitude(): ?float;
 
+    /**
+     * @param float $latitude
+     * @return NodeInterface
+     */
     public function setLatitude(
         float $latitude): NodeInterface;
 
+    /**
+     * @return float|null
+     */
     public function getLongitude(): ?float;
 
+    /**
+     * @param float $longitude
+     * @return NodeInterface
+     */
     public function setLongitude(
         float $longitude): NodeInterface;
 
+    /**
+     * @return string|null
+     */
     public function getDisplayName(): ?string;
 
+    /**
+     * @param string|null $displayName
+     * @return NodeInterface
+     */
     public function setDisplayName(
         ?string $displayName): NodeInterface;
 
@@ -31,9 +55,17 @@ interface NodeInterface
      */
     public function getOriginForWays(): Collection;
 
+    /**
+     * @param Way $originForWay
+     * @return NodeInterface
+     */
     public function addOriginForWay(
         Way $originForWay): NodeInterface;
 
+    /**
+     * @param Way $originForWay
+     * @return NodeInterface
+     */
     public function removeOriginForWay(
         Way $originForWay): NodeInterface;
 
@@ -42,9 +74,17 @@ interface NodeInterface
      */
     public function getDestinationForWays(): Collection;
 
+    /**
+     * @param Way $destinationForWay
+     * @return NodeInterface
+     */
     public function addDestinationForWay(
         Way $destinationForWay): NodeInterface;
 
+    /**
+     * @param Way $destinationForWay
+     * @return NodeInterface
+     */
     public function removeDestinationForWay(
         Way $destinationForWay): NodeInterface;
 }

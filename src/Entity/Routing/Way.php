@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Entity;
+namespace App\Entity\Routing;
 
 use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\WayRepository")
  */
-class Way
+class Way implements WayInterface
 {
     /**
      * @ORM\Id()
@@ -33,42 +33,65 @@ class Way
      */
     private $connectedPathWay;
 
+    /**
+     * @return int|null
+     */
     public function getId(): ?int
     {
         return $this->id;
     }
 
+    /**
+     * @return NodeInterface|null
+     */
     public function getOrigin(): ?NodeInterface
     {
         return $this->origin;
     }
 
-    public function setOrigin(
-        NodeInterface $origin): self
+    /**
+     * @param NodeInterface $origin
+     * @return $this
+     */
+    public function setOrigin(NodeInterface $origin): WayInterface
     {
         $this->origin = $origin;
 
         return $this;
     }
 
+    /**
+     * @return NodeInterface|null
+     */
     public function getDestination(): ?NodeInterface
     {
         return $this->destination;
     }
 
-    public function setDestination(?NodeInterface $destination): self
+    /**
+     * @param NodeInterface|null $destination
+     * @return $this
+     */
+    public function setDestination(?NodeInterface $destination): WayInterface
     {
         $this->destination = $destination;
 
         return $this;
     }
 
+    /**
+     * @return PathWay|null
+     */
     public function getConnectedPathWay(): ?PathWay
     {
         return $this->connectedPathWay;
     }
 
-    public function setConnectedPathWay(?PathWay $connectedPathWay): self
+    /**
+     * @param PathWay|null $connectedPathWay
+     * @return $this
+     */
+    public function setConnectedPathWay(?PathWay $connectedPathWay): WayInterface
     {
         $this->connectedPathWay = $connectedPathWay;
 
