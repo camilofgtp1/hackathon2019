@@ -48,7 +48,15 @@
 		</form>
 		<div class="menu flex-box-h">
 			<a href="{{ path('requesting_passenger')}}"><div class="button back"><img src='{{asset('gui/images/zurueck.png')}}' alt='Zurück' /></div></a>
-			<a href="javascript:tab('take')"><div class="button take"><img src='{{asset('gui/images/auto.png')}}' alt='Mitnehmen' /></div></a>
-			<a href="javascript:tab('thumb')"><div class="button thumb"><img src='{{asset('gui/images/daumen.png')}}' alt='Daumen raus' /></div></a>
+			<a href="#" onclick="take(this)"><div class="button take"><img src='{{asset('gui/images/auto.png')}}' alt='Mitnehmen' /></div></a>
+			<a href="#" onclick="thumb(this)"><div class="button thumb"><img src='{{asset('gui/images/daumen.png')}}' alt='Daumen raus' /></div></a>
 		</div>
+		<script>
+			function take(e){
+				e.classList.toggle("open");
+			}
+			function thumb(e){
+				e.classList.toggle("open");
+			}
+		</script>
 {% endblock %}
