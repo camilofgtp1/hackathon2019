@@ -1,0 +1,4 @@
+vehicle:
+  type:
+    public:
+      bus: Öffentlicher Bus
