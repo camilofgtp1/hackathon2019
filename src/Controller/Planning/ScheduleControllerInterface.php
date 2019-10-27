@@ -4,7 +4,7 @@ namespace App\Controller\Planning;
 
 use App\Services\requestingPassengerDTOInterface;
 
-interface ScheduleInterface
+interface ScheduleControllerInterface
 {
     public function index(requestingPassengerDTOInterface $dto);
 }
