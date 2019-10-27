@@ -1,29 +1,17 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controller\Planning;
 
-use App\Services\DataTransferObjects\NodeGeneratorInterface;
 use App\Services\requestingPassengerDTOInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class RequestingPassengerController extends AbstractController
-    implements RequestingPassengerControllerInterface
+class Schedule extends AbstractController
+    implements ScheduleInterface
 {
-
     /**
-     * @var NodeGeneratorInterface
-     */
-    private $nodeGenerator;
-
-    public function __construct(NodeGeneratorInterface $nodeGenerator)
-    {
-        $this->nodeGenerator = $nodeGenerator;
-    }
-
-    /**
-     * @Route("/requesting/passenger", name="requesting_passenger")
+     * @Route("/planning/schedule", name="planning_schedule")
      * @param requestingPassengerDTOInterface $dto
      * @return Response
      */

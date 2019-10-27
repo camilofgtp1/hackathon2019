@@ -78,7 +78,7 @@ class ScheduleListItemMockFactory
     {
         $mockedDestinationList = [
             'Hersfeld',
-            'Rothenburg',
+            'Rotenburg',
             'Großenbach'
         ];
 

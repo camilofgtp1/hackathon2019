@@ -1,29 +1,17 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controller\Planning;
 
-use App\Services\DataTransferObjects\NodeGeneratorInterface;
 use App\Services\requestingPassengerDTOInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class RequestingPassengerFindController extends AbstractController
-    implements RequestingPassengerFindControllerInterface
+class RaiseHand extends AbstractController
+    implements RaiseHandInterface
 {
-
     /**
-     * @var NodeGeneratorInterface
-     */
-    private $nodeGenerator;
-
-    public function __construct(NodeGeneratorInterface $nodeGenerator)
-    {
-        $this->nodeGenerator = $nodeGenerator;
-    }
-
-    /**
-     * @Route("/requesting/passengerFind", name="requesting_passenger_find")
+     * @Route("/planning/raise/hand", name="planning_raise_hand")
      * @param requestingPassengerDTOInterface $dto
      * @return Response
      */
